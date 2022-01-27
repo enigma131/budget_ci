@@ -1,8 +1,6 @@
-# stb6100
+# budget_ci
 
-This module source will create a new Linux kernel demodulator module with enhanced capabilities for low C/N or RF level signals. This module is part of my TechnoTrend TT-budget S2-3200 PCI card and also in other [devices](https://www.linuxtv.org/wiki/index.php/STMicroelectronics_STB6100)
-
-Frontend tweaks (second repository [stb0899](https://github.com/enigma131/stb0899)) can also be used if included in device (my use case).
+This module source will create a new Linux kernel CI module with correcions for CI init. This module is part of my TechnoTrend TT-budget S2-3200 PCI card and also in other devices.
 
 Total changes from Linux sources are in separate file [ListOfChanges](ListOfChanges). 
 
@@ -14,26 +12,26 @@ To compile the driver, you need to have make, compiler and kernel headers instal
 
 Next, get the repository to local:
 
-    git clone https://github.com/enigma131/stb6100.git
+    git clone https://github.com/enigma131/budget_ci.git
 
 If different kernel, you have to adjust the right path for KERNSRC and KERNELSOURCE in Makefile:
 
-    nano stb6100/Makefile 
+    nano budget_ci/Makefile 
 
 If changes made, save the file then exit nano.
 
 Initialize the DKMS structure:
 
-    sudo dkms add ./stb6100
+    sudo dkms add ./budget_ci
 
 Compile source / Install DKMS:
 
-    sudo dkms install stb6100/enigma13
+    sudo dkms install budget_ci/enigma13
 
 Verify result :
 
     dkms status
 
-    modinfo stb6100
+    modinfo budget_ci
 
 Reboot and test

@@ -1,13 +1,5 @@
-## stb6100.c :
-                             : correct lkup[] table
-                             : set stb6100_regs[] registers global 
-stb6100_read_reg             : correct single register read
-stb6100_write_reg            : suppress
-stb6100_set_bandwidth        : write via stb6100_write_reg_range and global registers
-stb6100_set_frequency        : modify BB gain values, according to Technotrend driver
-                               write via stb6100_write_reg_range and global registers according datashhet and TT driver,
-                                 otherwise demod core goes out of bounds for low c/n or low RF level, 
-                                 corrects also read estim C/N in stb0899_read_snr
-                               add 1 step ripped from TT
-                               add lock detect at end
-
+## budget-ci.c:              : includes stb0899_reg.h for compil
+tt3200_stb0899_s1_init_1[]   : modify/correct/add some init values
+tt3200_stb0899_s1_init_3[]   : modify/correct some init values
+                             : remove read only registers (speed up init)
+ciintf_slot_reset            : modify reset, CI compatibility

@@ -327,9 +327,9 @@ static int ciintf_slot_reset(struct dvb_ca_en50221 *ca, int slot)
 			       CICONTROL_RESET, 1, 0);
     for (i = 0; i < 15; i++) {                          // attempt to read FR bit after reset
 		                    msleep(100);                           
-                                    ret = ciintf_read_cam_control(ca,slot,1); // RE or zero ou stutus (smit)
+                                    ret = ciintf_read_cam_control(ca,slot,1); // RE or zero or status (smit)
                                                             // printk("Status register: %d \n", ret);
-		                    if (ret & 64) {         // STATUSREG_FR bit found , see dvb_ca_en50221.c
+		                    if (ret & 64) {         // STATUSREG_FR (module free bit found) , see dvb_ca_en50221.c
 			                            printk("exit waiting CAM reset at %d00 ms\n" , i);
 			                            break;  // exit loop saving time.
 		                                   }

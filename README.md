@@ -30,8 +30,8 @@ Compile source / Install DKMS:
 
 Verify result :
 
-    dkms status
+    sudo dkms status
 
-    modinfo budget_ci
+    sudo modinfo budget_ci
 
 Reboot and test

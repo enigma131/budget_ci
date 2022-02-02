@@ -1,3 +1,6 @@
+## stb0899_cfg.h :
+BBAGCCNTRL                   : modify for modules configuration compilation
+
 ## budget-ci.c:              : includes patched stb0899_reg.h for compil
 tt3200_stb0899_s1_init_1[]   : modify/correct/add some init values
 tt3200_stb0899_s1_init_3[]   : modify/correct some init values

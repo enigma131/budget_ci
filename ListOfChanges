@@ -6,3 +6,5 @@ tt3200_stb0899_s1_init_1[]   : modify/correct/add some init values
 tt3200_stb0899_s1_init_3[]   : modify/correct some init values
                              : remove read only registers (speed up init)
 ciintf_slot_reset            : modify reset, CI compatibility
+
+From up and including kernel 6.11, new source budget_ci.ckernel611 is to use instead budget_ci.c due to kernel's media branch modifications.
